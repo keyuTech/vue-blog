@@ -1,4 +1,4 @@
-import requset from '../../handlers/requset'
+import requset from '../../handlers/request'
 
 export default {
   data () {

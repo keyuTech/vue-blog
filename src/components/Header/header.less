@@ -54,4 +54,35 @@
     margin-left: 15px;
     cursor: pointer;
   }
+
+  .user {
+    position: relative;
+
+    .myMenu {
+      display: none;
+      position: absolute;
+      right: 0;
+      list-style: none;
+      border: 1px solid #eaeaea;
+      margin: 0;
+      padding: 0;
+      background-color: #FFFFFF;
+
+      .logoutLink {
+        text-decoration: none;
+        color: #333333;
+        font-size: 12px;
+        display: block;
+        padding: 5px 10px;
+
+        &:hover {
+          background-color: #eaeaea;
+        }
+      }
+    }
+
+    &:hover .myMenu {
+      display: block;
+    }
+  }
 }
