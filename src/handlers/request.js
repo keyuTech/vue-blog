@@ -8,20 +8,18 @@ axios.defaults.withCredentials = true
 export default function request(url, type = 'GET', data = {}) {
   return new Promise((resolve, reject) => {
     let option = {
-      url: url,
-      method: type,
+      url,
+      method: type
     }
-
-    if(type.toLowerCase === 'get') {
+    if(type.toLowerCase() === 'get') {
       option.params = data
-    } else {
+    }else {
       option.data = data
     }
-
     axios(option).then(res => {
       if(res.data.status === 'ok') {
         resolve(res.data)
-      } else {
+      }else{
         Message.error(res.data.msg)
         reject(res.data)
       }

@@ -27,6 +27,9 @@
     .blog-title {
       grid-column: 2;
       grid-row: 1;
+      max-width: 68vw;
+      text-overflow:ellipsis;
+      overflow:hidden;
 
       .blog-time {
         font-size: 1px;
@@ -39,6 +42,22 @@
       grid-column: 2;
       grid-row: 2;
       margin-top: 0;
+      max-width: 68vw;
+      text-overflow:ellipsis;
+      overflow:hidden;
     }
+  }
+
+  @media (max-width: 786px) {
+    .blog-title {
+      width: 90vw;
+    }
+    .blog-content {
+      width: 90vw;
+    }
+  }
+
+  .pagination {
+    font-size: 16px;
   }
 }
